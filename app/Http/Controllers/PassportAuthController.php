@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class PassportAuthController extends Controller
 {
@@ -11,20 +12,25 @@ class PassportAuthController extends Controller
      */
     public function register(Request $request)
     {
-      /*   $this->validate($request, [
+       $this->validate($request, [
             'name' => 'required|min:4',
             'email' => 'required|email',
             'password' => 'required|min:8',
-        ]); */
-
-/*         $user = User::create([
-            'name' => 'name',
-            'email' => 'name@mail.com',
-            'password' => bcrypt('123456')
         ]);
 
-        $token = $user->createToken('LaravelAuthApp')->accessToken; */
+/*         $user = User::create([
+            'name' => 'name4',
+            'email' => 'name4@mail.com',
+            'password' => Hash::make('123456')
+        ]); */
 
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ]);
+
+        $token = $user->createToken('LaravelAuthApp')->accessToken;
         return response()->json(['token' => $token], 200);
     }
 
@@ -34,8 +40,8 @@ class PassportAuthController extends Controller
     public function login(Request $request)
     {
         $data = [
-            'email' => 'name@mail.com',
-            'password' => '123456'
+            'email' => $request->email,
+            'password' => $request->password
         ];
 
         if (auth()->attempt($data)) {
