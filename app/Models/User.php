@@ -65,5 +65,17 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+    public function contacts()
+    {
+        return $this->hasMany(Wallet::class);
+    }
+    public function wallet()
+    {
+        return $this->belongsTo(Wallet::class);
+    }
+    public function domain()
+    {
+        return $this->belongsTo(Wallet::class);
+    }
 
 }

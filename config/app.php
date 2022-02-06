@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'fa',
 
     /*
     |--------------------------------------------------------------------------
@@ -161,6 +161,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+		Hekmatinasser\Verta\Laravel\VertaServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
 
         /*
@@ -177,6 +180,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        App\Providers\MenuindexProvider::class,
 
     ],
 
@@ -232,6 +236,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'Verta' => Hekmatinasser\Verta\Verta::class,
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
 
     ],
 
