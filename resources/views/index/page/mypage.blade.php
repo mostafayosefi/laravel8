@@ -5,6 +5,7 @@
             ['title'=>'مشاهده سوالات متداول','class' => 'active']
     ]])
 
+{{-- تست مشاهده --}}
 
  <div data-elementor-type="wp-page" data-elementor-id="2792" class="elementor elementor-2792"
      data-elementor-settings="[]">
@@ -65,8 +66,8 @@
                                          <div class="elementor-widget-container">
                                              <div class="elementor-text-editor elementor-clearfix">
 
-                                                
 
+{{-- test fix  --}}
                                               @php
                                                   echo $mypage->text;
                                               @endphp
