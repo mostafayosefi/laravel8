@@ -54,7 +54,7 @@ class AdminAuthController extends Controller
 return redirect()->route('admin.dashboard');
         }
 
-/*   $admin = Admin::create([
+/*    $admin = Admin::create([
     'name' => 'مصطفی یوسفی' ,
     'username' => 'Admin' ,
     'email'=> 'admin@gmail.com',

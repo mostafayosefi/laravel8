@@ -26,7 +26,7 @@ class LoginUserController extends Controller
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required',
-            'captcha' => 'required|captcha'
+            // 'captcha' => 'required|captcha'
 
         ]);
         if(Auth::guard('user')->attempt(array('email' => $input['email'], 'password' => $input['password'])))

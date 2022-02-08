@@ -64,29 +64,7 @@ class MyDomainController extends Controller
 
 
     public function CheckDomainPost(Request $request){
-
-
-        $rulle=ruledomain($request);
-        $orginaldomain=linkdomain($request->domain , $request->suffix  );
-        $domain=linkdomainOrigin($request->domain , $request->suffix  );
-        $multidomain=multidomain($domain , $orginaldomain  );
-
-        $data = $request->all();
-        $data['operator']= 'checkRegisterAvailability';
-        $data['origindomain']= $orginaldomain;
-        $data['withperfix']= $domain;
-        $data['multidomain']= $multidomain['AllDomain'];
-        $data['CountWhile']= $multidomain['CountWhile'];
-        $data['code']= Str::random(40);
-        if(Auth::guard('user')->user()){ $data['user_id']= Auth::guard('user')->user()->id;}
-        $data['name']= $orginaldomain;
-        $data['link']= $orginaldomain;
-        $data['status']= 'checkRegisterAvailability';
-    Webservice::create($data);
-
-
-    $webservice=Webservice::where('code' , $data['code'])->first();
-    $data['webservice_id']=$webservice->id;
+  $data=all_request_domain($request);
   $tasks_controller = new DomainController('web');
   return  $tasks_controller->CheckAvailability(  $data );
 

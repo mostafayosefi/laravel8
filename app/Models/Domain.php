@@ -15,6 +15,7 @@ class Domain extends Model
         'domain',
         'price',
         'status',
+        'riyal',
         'user_id',
         'contact_id',
     ];

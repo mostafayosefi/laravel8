@@ -117,7 +117,7 @@ trait Formatting
 
             # Week
             case 'W':
-                return ceil( $this->daysYear( $pMonth, $pDay ) / 7 );
+                return $this->dayOfWeek();
 
             # Month
             case 'F':
@@ -134,7 +134,10 @@ trait Formatting
 
             case 't':
                 return static::isLeapYear( $pYear ) && ( $pMonth == 12 ) ? 30 : static::$daysMonthJalali[ intval( $pMonth ) - 1 ];
-
+            # Quarter
+            case 'Q':
+            case 'q':
+                return self::$messages['quarters'][$this->quarter];
             # Years
             case 'L':
                 return intval( $this->isLeapYear( $pYear ) );
@@ -243,6 +246,21 @@ trait Formatting
     }
 
     /**
+     * return week number from first of year
+     *
+     * @param int $month
+     * @param int $day
+     * @return type
+     * @since 5.0.0
+     */
+    protected function dayOfWeek()
+    {
+        $offset = $this->clone()->startYear()->format('w');
+        $days = $this->format('z');
+        return ceil( ($days + $offset) / 7 );
+    }
+
+    /**
      * The format of the outputted date string (jalali equivalent of php strftime() function)
      *
      * @param $format
@@ -291,6 +309,8 @@ trait Formatting
             "%n" => "\n",
             "%t" => "\t",
             "%%" => "%",
+            "%Q" => "q",
+            "%q" => "q"
         );
 
         return str_replace(array_keys($strftime_date), array_values($strftime_date), $format);

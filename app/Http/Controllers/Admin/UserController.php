@@ -28,7 +28,7 @@ class UserController extends Controller
             'password' => Hash::make('123456') ,
         ]); */
 
-        $users=User::idDescending()->cursor();
+        $users=User::all();
 
 
 

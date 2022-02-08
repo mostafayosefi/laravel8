@@ -17,7 +17,8 @@ class CheckdomainResource extends JsonResource
         return [
             'id' => $this->id,
             'domain' => $this->domain,
-            'price' => $this->price,
+            'usd' => $this->price,
+            'price' => $this->riyal,
             'type' => $this->type,
          ];
     }

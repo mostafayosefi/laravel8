@@ -31,12 +31,12 @@ class DomainController extends Controller
 
 
 public function CheckAvailability(  $data ){
-    
+
     $setting=Setting::find(1);
- $myurl = data_build_query('api/' , $data).'&domains='.$data['multidomain']; 
+ $myurl = data_build_query('api/' , $data).'&domains='.$data['multidomain'];
 $resource = Psr7\Utils::tryFopen($myurl, 'r');
 $stream = Psr7\Utils::streamFor($resource);
-$xml = simplexml_load_string($stream); 
+$xml = simplexml_load_string($stream);
 $invalid=$xml->reply->invalid;
 $var=$xml->reply->unavailable;
 
@@ -56,8 +56,8 @@ if (empty($var)) {
                 $data['type']=  'top';
                 }
     $data['domain']= $xml->reply->available->domain[$i];
-    $data['price']= $xml->reply->available->domain[$i]['price']; 
-    $data['riyal']= ($data['price'] * $setting->mngfinical->rateusd ); 
+    $data['price']= $xml->reply->available->domain[$i]['price'];
+    $data['riyal']= ($data['price'] * $setting->mngfinical->rateusd );
     Checkdomain::create($data);
     $i++;
      }
@@ -67,7 +67,8 @@ if (empty($var)) {
         'alldomain' =>  array($n) ,
     ]);
     if($this->external=='api'){
-        return new CheckdomainCollection(Checkdomain::where('webservice_id' , $data['webservice_id'])->orderBy('type' ,'asc')->get());
+        $myquery=query_resource($data,'checkdomain');
+        return new CheckdomainCollection($myquery);
     }
     if($this->external=='web'){
         $result=Checkdomain::where('webservice_id' , '=' ,$data['webservice_id'])->first();

@@ -8,7 +8,7 @@ class CheckdomainCollection extends ResourceCollection
 {
 
 
-    
+
     /**
      * Transform the resource collection into an array.
      *
@@ -20,6 +20,7 @@ class CheckdomainCollection extends ResourceCollection
 
         return [
             'data' => $this->collection,
+            'muldomain' => $request->muldomain,
             'links' => [
                 'self' => 'link-value',
             ],

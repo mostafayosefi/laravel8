@@ -5,15 +5,20 @@ use App\Models\Wallet;
 use App\Models\Contact;
 use App\Rules\Uniqemail;
 
-use App\Rules\ValidateLink;
+use App\Models\Webservice;
 
+use App\Models\Checkdomain;
+use App\Rules\ValidateLink;
 use App\Rules\ValidateRule;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\ContentDomain;
 use App\Models\Loginhistorie;
 use \Hekmatinasser\Verta\Verta;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Validator;
 
 
 
@@ -222,9 +227,48 @@ if(! function_exists('ValidateContact') ) {
     }
 }
 
-if(! function_exists('SelectDefault') ) {
-    function SelectDefault($user_id,$contact)
+
+
+
+
+
+if(! function_exists('query_resource') ) {
+    function query_resource($data,$table)
     {
+
+if($table=='checkdomain'){
+
+        $query=Checkdomain::query()->where([
+            ['webservice_id' , $data['webservice_id']],
+            ]);
+
+        $myquery=Checkdomain::query()->where([
+                ['webservice_id' , $data['webservice_id']],
+                ])->orderBy('type' ,'asc')->get();
+
+if($data['muldomain']=='1'){
+    $myquery=$query->orderBy('type' ,'asc')->get();
+} else{
+            $myquery=$query->where([
+                ['type' , 'search'],
+                ])->orderBy('type' ,'asc')->get();
+
+        }
+
+
+    }
+
+
+
+    return $myquery;
+
+
+    }
+}
+
+        if(! function_exists('SelectDefault') ) {
+            function SelectDefault($user_id,$contact)
+            {
         Contact::where('user_id', $user_id)
         ->update(['default' => 'inactive']);
 
@@ -543,6 +587,80 @@ return $personJSON = response()->json([
     }
 
 
+
+
+
+    if(! function_exists('all_request_domain') ) {
+        function all_request_domain(Request $request)
+        {
+
+            $rulle=ruledomain($request);
+            $orginaldomain=linkdomain($request->domain , $request->suffix  );
+            $domain=linkdomainOrigin($request->domain , $request->suffix  );
+            $multidomain=multidomain($domain , $orginaldomain  );
+
+            $data = $request->all();
+            $data['operator']= 'checkRegisterAvailability';
+            $data['origindomain']= $orginaldomain;
+            $data['withperfix']= $domain;
+            $data['multidomain']= $multidomain['AllDomain'];
+            $data['CountWhile']= $multidomain['CountWhile'];
+            $data['code']= Str::random(40);
+            if(Auth::guard('user')->user()){ $data['user_id']= Auth::guard('user')->user()->id;}
+            $data['name']= $orginaldomain;
+            $data['link']= $orginaldomain;
+            $data['status']= 'checkRegisterAvailability';
+        Webservice::create($data);
+
+
+        $webservice=Webservice::where('code' , $data['code'])->first();
+        $data['webservice_id']=$webservice->id;
+        // $data['multidomain']=$request->multidomain;
+
+        return $data;
+
+
+        }
+    }
+
+
+
+
+
+
+if(! function_exists('validate_domain') ) {
+    function validate_domain(Request $request)
+    {
+
+
+        $regec_pers = Validator::make($request->all(), [
+            'domain' => ['required',new ValidateLink('UrlNamesilo','regec_pers')] ,
+        ]);
+
+        $www = Validator::make($request->all(), [
+            'domain' => ['required',new ValidateLink('UrlNamesilo','www')] ,
+        ]);
+
+        $http = Validator::make($request->all(), [
+            'domain' => ['required',new ValidateLink('UrlNamesilo','http')] ,
+        ]);
+
+        $https = Validator::make($request->all(), [
+            'domain' => ['required',new ValidateLink('UrlNamesilo','https')] ,
+        ]);
+
+        $regec_eng = Validator::make($request->all(), [
+            'domain' => ['required',new ValidateLink('UrlNamesilo','regec_eng')] ,
+        ]);
+
+
+
+        if (($regec_pers->fails())||($www->fails())||($http->fails())||($https->fails())||($regec_eng->fails())) {
+            return 'invalid';
+        }else{   return 'ok';  }
+
+    }
+}
 
 
 }

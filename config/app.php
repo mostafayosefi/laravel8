@@ -163,7 +163,6 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 		Hekmatinasser\Verta\Laravel\VertaServiceProvider::class,
-        Mews\Captcha\CaptchaServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
 
         /*
@@ -238,7 +237,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Verta' => Hekmatinasser\Verta\Verta::class,
-        'Captcha' => Mews\Captcha\Facades\Captcha::class,
 
     ],
 

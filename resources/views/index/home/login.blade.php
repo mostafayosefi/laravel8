@@ -77,7 +77,7 @@
                                             data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
                                             data-widget_type="form.default">
                                             <div class="elementor-widget-container">
- 
+
 
                                                 @include('index.layouts.form_errors')
 
@@ -137,26 +137,26 @@
 
 
 
-
+{{-- 
 <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
 
     <label>کد کپچا </label>
+    </div> --}}
+
+
+    <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+    {{-- <input size="1" type="text"  class="elementor-field elementor-size-sm  elementor-field-textual" name="captcha" id="captcha" placeholder="کد کپچا"  required=""> --}}
     </div>
 
 
     <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
-    <input size="1" type="text"  class="elementor-field elementor-size-sm  elementor-field-textual" name="captcha" id="captcha" placeholder="کد کپچا"  required="">
-    </div>
 
-
-    <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
-
-        <div class="captcha">
+        {{-- <div class="captcha">
             <span>{!! captcha_img() !!}</span>
         <button type="button" class="btn btn-danger" class="reload" id="reload">
             &#x21bb;
         </button>
-    </div>
+    </div> --}}
 </div>
 
 
