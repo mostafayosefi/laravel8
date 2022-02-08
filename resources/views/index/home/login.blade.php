@@ -91,7 +91,8 @@
                                                         <div
                                                             class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
 
-                                                            <label> ایمیل</label>
+                                                            {{-- <label> ایمیل</label> --}}
+                                                            <label> ایمیل من</label>
                                                         </div>
 
                                                         <div
@@ -137,7 +138,7 @@
 
 
 
-{{-- 
+{{--
 <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
 
     <label>کد کپچا </label>
