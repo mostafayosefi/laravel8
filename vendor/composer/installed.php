@@ -5,11 +5,20 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '82c3d8f0938cf2e4a1545287f6f8bd5e98b960fb',
+        'reference' => 'c3716731c3b72177e1a8a0d859f9d65a798d9c99',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'anhskohbo/no-captcha' => array(
+            'pretty_version' => '3.3.0',
+            'version' => '3.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../anhskohbo/no-captcha',
+            'aliases' => array(),
+            'reference' => 'f654a4093bd2e9ddbdfad3297bb7aa142a55e611',
+            'dev_requirement' => false,
+        ),
         'arcanedev/no-captcha' => array(
             'pretty_version' => '12.2.0',
             'version' => '12.2.0.0',
@@ -517,7 +526,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '82c3d8f0938cf2e4a1545287f6f8bd5e98b960fb',
+            'reference' => 'c3716731c3b72177e1a8a0d859f9d65a798d9c99',
             'dev_requirement' => false,
         ),
         'laravel/passport' => array(
@@ -584,12 +593,12 @@
             'dev_requirement' => false,
         ),
         'lcobucci/jwt' => array(
-            'pretty_version' => '4.1.5',
-            'version' => '4.1.5.0',
+            'pretty_version' => '4.0.4',
+            'version' => '4.0.4.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../lcobucci/jwt',
             'aliases' => array(),
-            'reference' => 'fe2d89f2eaa7087af4aa166c6f480ef04e000582',
+            'reference' => '55564265fddf810504110bd68ca311932324b0e9',
             'dev_requirement' => false,
         ),
         'league/commonmark' => array(

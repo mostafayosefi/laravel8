@@ -164,6 +164,7 @@ return [
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 		Hekmatinasser\Verta\Laravel\VertaServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -237,6 +238,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Verta' => Hekmatinasser\Verta\Verta::class,
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
 
     ],
 

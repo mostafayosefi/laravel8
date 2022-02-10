@@ -40,6 +40,8 @@ Route::namespace('Auth')->prefix('admin')->group(function () {
         Route::namespace('Index')->name('index.')->group(function () {
             Route::get('/', [IndexController::class, 'index'])->name('home');
             Route::get('/service/{title}', [IndexController::class, 'page'])->name('page');
+            Route::get('/user/register', [LoginuserController::class, 'register'])->name('user.register');
+            Route::post('/user/register', [LoginuserController::class, 'store'])->name('user.register.post');
             Route::get('/user/login', [LoginuserController::class, 'login'])->name('user.login');
             Route::post('/user/login', [LoginuserController::class, 'authenticate'])->name('user.login.post');
             Route::post('/user/logout', [LoginuserController::class, 'logout'])->name('user.logout');

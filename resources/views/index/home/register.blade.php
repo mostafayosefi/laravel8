@@ -1,7 +1,7 @@
 @component('index.layouts.content', [
-    'title' => ' صفحه اصلی',
-    'tabTitle' => ' صفحه اصلی ',
-    'breadcrumb' => [['title' => 'صفحه اصلی', 'class' => 'active']],
+    'title' => ' ثبت نام',
+    'tabTitle' => ' ثبت نام',
+    'breadcrumb' => [['title' => 'ثبت نام', 'class' => 'active']],
     ])
 
 
@@ -10,8 +10,6 @@
 
 
 <link data-minify="1" rel='stylesheet' id='elementor-post-2723-css'  href="{{ asset('telnum_files/post-52.css?ver=1631767702') }}"  type='text/css' media='all' />
-
-
 
 <link data-minify="1" rel="stylesheet" id="elementor-post-2-css" href="{{ asset('telnum_files/post-2.css') }}"  type="text/css" media="all">
 
@@ -84,52 +82,84 @@
 
 
                                                 <form class="elementor-form" method="post"
-                                                action="{{route('index.user.login.post')}}">
+                                                action="{{route('index.user.register.post')}}">
                                                 @csrf
                                                     <div class="elementor-form-fields-wrapper elementor-labels-above">
 
+
                                                         <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
-
-                                                            {{-- <label> ایمیل</label> --}}
-                                                            <label> ایمیل من</label>
+                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
                                                         </div>
-
                                                         <div
                                                             class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+
+
+                                                            <label> نام و نام خانوادگی</label>
+                                                            <input size="1" type="text" name="name"
+                                                                id="form-field-name"
+                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                placeholder="نام و نام خانوادگی"
+                                                                required="required" value="{{ old('name') }}"
+                                                                aria-required="true">
+                                                                <br>
+
+                                                         </div>
+
+                                                        <div
+                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
+
+                                                        </div>
+                                                        <div
+                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+
+                                                            <label> ایمیل </label>
                                                             <input size="1" type="email" name="email"
                                                                 id="form-field-name"
                                                                 class="elementor-field elementor-size-sm  elementor-field-textual"
                                                                 placeholder="لطفا ایمیل خود را وارد نمایید"
                                                                 required="required" value="{{ old('email') }}"
                                                                 aria-required="true">
+
+
                                                         </div>
 
+
+
+
+
+                                                        <div
+                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
+                                                        </div>
                                                         <div
                                                             class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
-
-                                                        </div>
-
-
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
 
                                                             <label>رمزعبور</label>
-                                                        </div>
 
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
                                                             <input size="1" type="password" name="password"
                                                                 id="form-field-name"
                                                                 class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="لطفا رمزعبور خود را وارد نمایید"
+                                                                placeholder="" value="{{ old('password') }}"
+                                                                required="required" aria-required="true">
+
+
+                                                                   <hr>
+                                                         </div>
+
+                                                        <div
+                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
+
+                                                        </div>
+                                                        <div
+                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+                                                            <label>تکرار رمزعبور</label>
+
+                                                            <input size="1" type="password" name="password_confirmation"
+                                                                id="form-field-name"
+                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                                placeholder="" value="{{ old('password_confirmation') }}"
                                                                 required="required" aria-required="true">
                                                         </div>
 
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
-
-                                                        </div>
 
 
 
@@ -139,7 +169,8 @@
 
 
 
-<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
+
+<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
 
     <label> &nbsp;   </label>
     </div>
@@ -191,7 +222,7 @@
                                                             class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-60 elementor-field-required">
                                                             <button type="submit"
                                                                 class="elementor-button elementor-size-sm">
-                                                                ورود
+                                                                ثبت نام
                                                             </button>
                                                         </div>
 

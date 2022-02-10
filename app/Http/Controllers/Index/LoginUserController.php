@@ -13,6 +13,44 @@ class LoginUserController extends Controller
 {
 
 
+    public function register(){
+        if (Auth::guard('user')->user()) {
+      return redirect()->route('user.panel.index');  }
+        return view('index.home.register'  );
+    }
+
+
+
+    public function store(Request $request)
+    {
+
+        $input = $request->all();
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|unique:users,email,$request->email',
+            'password' => 'required| min:4 |confirmed',
+            'password_confirmation' => 'required| min:4',
+            'g-recaptcha-response' => 'required|captcha'
+        ]);
+
+
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password) ,
+        ]);
+        if(Auth::guard('user')->attempt(array('email' => $input['email'], 'password' => $input['password'])))
+        {
+
+        Alert::success('با موفقیت انجام شد', 'ثبت نام شما باموفقیت انجام شد');
+        return redirect()->route('user.panel.index');
+
+        }
+
+    }
+
+
     public function login(){
         if (Auth::guard('user')->user()) {
       return redirect()->route('user.panel.index');  }
@@ -26,7 +64,7 @@ class LoginUserController extends Controller
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required',
-            // 'captcha' => 'required|captcha'
+            'g-recaptcha-response' => 'required|captcha'
 
         ]);
         if(Auth::guard('user')->attempt(array('email' => $input['email'], 'password' => $input['password'])))

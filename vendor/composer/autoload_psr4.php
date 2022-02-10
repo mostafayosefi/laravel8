@@ -120,4 +120,5 @@ return array(
     'Arcanedev\\NoCaptcha\\' => array($vendorDir . '/arcanedev/no-captcha/src'),
     'Arcanedev\\Html\\' => array($vendorDir . '/arcanedev/php-html/src'),
     'App\\' => array($baseDir . '/app'),
+    'Anhskohbo\\NoCaptcha\\' => array($vendorDir . '/anhskohbo/no-captcha/src'),
 );

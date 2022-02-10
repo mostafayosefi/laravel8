@@ -219,6 +219,7 @@ return [
         "ip2" => "آی پی دوم",
         "ip3" => "آی پی سوم",
         "currenthost" => "هاست فعلی",
+        "g-recaptcha-response" => "تاییدیه کپچا",
 
 
 
