@@ -4,197 +4,151 @@
     'breadcrumb' => [['title' => 'ثبت نام', 'class' => 'active']],
     ])
 
-
-@slot('style')
-
+ 
 
 
-<link data-minify="1" rel='stylesheet' id='elementor-post-2723-css'  href="{{ asset('telnum_files/post-52.css?ver=1631767702') }}"  type='text/css' media='all' />
-
-<link data-minify="1" rel="stylesheet" id="elementor-post-2-css" href="{{ asset('telnum_files/post-2.css') }}"  type="text/css" media="all">
-
-<link data-minify="1" rel='stylesheet' id='elementor-post-52-css'  href="{{ asset('telnum_files/post-52.css?ver=1631767702') }}"  type='text/css' media='all' />
-
-<link rel="stylesheet" id="elementor-icons-shared-0-css" href="{{ asset('telnum_files/fontawesome.min.css" type="text/css') }}"  media="all">
-<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-brands-css" href="{{ asset('telnum_files/brands.min.css') }}"  type="text/css" media="all">
-<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-solid-css" href="{{ asset('telnum_files/solid.min.css') }}"  type="text/css" media="all">
-<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-regular-css" href="{{ asset('telnum_files/regular.min.css') }}"  type="text/css" media="all">
-<script type="text/javascript" src="{{ asset('telnum_files/jquery.min.js.download" id="jquery-core-js') }}" ></script>
-<script type="text/javascript" src="{{ asset('telnum_files/jquery-migrate.min.js.download" id="jquery-migrate-js') }}" ></script>
-<script type="text/javascript" src="{{ asset('telnum_files/v4-shims.min.js.download" id="font-awesome-4-shim-js') }}" ></script>
-
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-<style>
-    .container {
-        max-width: 500px;
-    }
-    .reload {
-        font-family: Lucida Sans Unicode
-    }
-</style>
-@endslot
+<div data-elementor-type="wp-post" data-elementor-id="52" class="elementor elementor-52" data-elementor-settings="[]">
+    <div class="elementor-inner">
+        <div class="elementor-section-wrap">
+            @include('index.layouts.elementor.warp', [ 'id' => '3' ])
+            <section
+                class="elementor-section elementor-top-section elementor-element elementor-element-a45e332 elementor-section-boxed elementor-section-height-default elementor-section-height-default default-style"
+                data-id="a45e332" data-element_type="section"
+                data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_bottom&quot;:&quot;mountains&quot;,&quot;rt_color_sets&quot;:&quot;default-style&quot;}">
+                <div class="elementor-shape elementor-shape-bottom" data-negative="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                        <path class="elementor-shape-fill" opacity="0.33"
+                            d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z" />
+                        <path class="elementor-shape-fill" opacity="0.66"
+                            d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z" />
+                        <path class="elementor-shape-fill"
+                            d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z" />
+                    </svg>
+                </div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
 
 
-
-    <div data-elementor-type="wp-post" data-elementor-id="52" class="elementor elementor-52" data-elementor-settings="[]">
-        <div class="elementor-inner">
-            <div class="elementor-section-wrap">
-
-
-
- @include('index.layouts.elementor.warp', [  'id' => '1'  ])
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-71c294d"
+                            data-id="71c294d" data-element_type="column">
+                            <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
 
 
+                                    <div class="elementor-element elementor-element-70ca113 elementor-widget elementor-widget-rt-heading"
+                                        data-id="70ca113" data-element_type="widget"
+                                        data-widget_type="rt-heading.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="rt-heading-wrapper text-center">
 
 
-                <section
-                    class="elementor-section elementor-top-section elementor-element elementor-element-6d431d8 elementor-section-boxed elementor-section-height-default elementor-section-height-default default-style"
-                    data-id="6d431d8" data-element_type="section"
-                    data-settings="{&quot;rt_color_sets&quot;:&quot;default-style&quot;}">
-                    <div class="elementor-container elementor-column-gap-default">
-                        <div class="elementor-row">
-                            <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-0cc4eaa"
-                                data-id="0cc4eaa" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                    <div class="elementor-widget-wrap">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-9c06592"
-                                data-id="9c06592" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                    <div class="elementor-widget-wrap">
+                                @include('index.layouts.elementor.widget', [ 'id' => '3' ])
 
 
- @include('index.layouts.elementor.widget', [  'id' => '1'  ])
+                                    <div class="elementor-element elementor-element-412944a elementor-widget elementor-widget-rt-pricing-table"
+                                        data-id="412944a" data-element_type="widget"
+                                        data-widget_type="rt-pricing-table.default">
 
-                                        <div class="elementor-element elementor-element-1720180 elementor-button-align-center elementor-widget elementor-widget-form"
-                                            data-id="1720180" data-element_type="widget"
-                                            data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
-                                            data-widget_type="form.default">
-                                            <div class="elementor-widget-container">
-
-
-                                                @include('index.layouts.form_errors')
+                                        <div class="elementor-widget-container">
+                                            @include('index.layouts.form_errors')
 
 
 
-                                                <form class="elementor-form" method="post"
-                                                action="{{route('index.user.register.post')}}">
-                                                @csrf
-                                                    <div class="elementor-form-fields-wrapper elementor-labels-above">
+                                            <form class="elementor-form" method="post"
+                                            action="{{route('index.user.register.post')}}">
+                                            @csrf
+                                                <div class="elementor-form-fields-wrapper elementor-labels-above">
 
 
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
-                                                        </div>
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
+                                                    </div>
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
 
 
-                                                            <label> نام و نام خانوادگی</label>
-                                                            <input size="1" type="text" name="name"
-                                                                id="form-field-name"
-                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="نام و نام خانوادگی"
-                                                                required="required" value="{{ old('name') }}"
-                                                                aria-required="true">
-                                                                <br>
+                                                        <label> نام و نام خانوادگی</label>
+                                                        <input size="1" type="text" name="name"
+                                                            id="form-field-name"
+                                                            class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                            placeholder="نام و نام خانوادگی"
+                                                            required="required" value="{{ old('name') }}"
+                                                            aria-required="true">
+                                                            <br>
 
-                                                         </div>
+                                                     </div>
 
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
 
-                                                        </div>
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+                                                    </div>
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
 
-                                                            <label> ایمیل </label>
-                                                            <input size="1" type="email" name="email"
-                                                                id="form-field-name"
-                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="لطفا ایمیل خود را وارد نمایید"
-                                                                required="required" value="{{ old('email') }}"
-                                                                aria-required="true">
-
-
-                                                        </div>
+                                                        <label> ایمیل </label>
+                                                        <input size="1" type="email" name="email"
+                                                            id="form-field-name"
+                                                            class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                            placeholder="لطفا ایمیل خود را وارد نمایید"
+                                                            required="required" value="{{ old('email') }}"
+                                                            aria-required="true">
 
 
+                                                    </div>
 
 
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
+                                                    </div>
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
 
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
-                                                        </div>
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+                                                        <label>رمزعبور</label>
 
-                                                            <label>رمزعبور</label>
-
-                                                            <input size="1" type="password" name="password"
-                                                                id="form-field-name"
-                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="" value="{{ old('password') }}"
-                                                                required="required" aria-required="true">
-
-
-                                                                   <hr>
-                                                         </div>
-
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
-
-                                                        </div>
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
-                                                            <label>تکرار رمزعبور</label>
-
-                                                            <input size="1" type="password" name="password_confirmation"
-                                                                id="form-field-name"
-                                                                class="elementor-field elementor-size-sm  elementor-field-textual"
-                                                                placeholder="" value="{{ old('password_confirmation') }}"
-                                                                required="required" aria-required="true">
-                                                        </div>
+                                                        <input size="1" type="password" name="password"
+                                                            id="form-field-name"
+                                                            class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                            placeholder="" value="{{ old('password') }}"
+                                                            required="required" aria-required="true">
 
 
+                                                               <hr>
+                                                     </div>
 
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
 
+                                                    </div>
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+                                                        <label>تکرار رمزعبور</label>
 
-
-
+                                                        <input size="1" type="password" name="password_confirmation"
+                                                            id="form-field-name"
+                                                            class="elementor-field elementor-size-sm  elementor-field-textual"
+                                                            placeholder="" value="{{ old('password_confirmation') }}"
+                                                            required="required" aria-required="true">
+                                                    </div>
 
 
 
 
 <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-10 elementor-field-required">
 
-    <label> &nbsp;   </label>
-    </div>
+<label> &nbsp;   </label>
+</div>
 
 
-    <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
-    {{-- <input size="1" type="text"  class="elementor-field elementor-size-sm  elementor-field-textual" name="captcha" id="captcha" placeholder="کد کپچا"  required=""> --}}
+<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
 
-    {!! NoCaptcha::renderJs() !!}
-    {!! NoCaptcha::display() !!}
-    </div>
-
-
-    <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
+{!! NoCaptcha::renderJs() !!}
+{!! NoCaptcha::display() !!}
+</div>
 
 
+<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-40 elementor-field-required">
 
 
-        {{-- <div class="captcha">
-            <span>{!! captcha_img() !!}</span>
-        <button type="button" class="btn btn-danger" class="reload" id="reload">
-            &#x21bb;
-        </button>
-    </div> --}}
 </div>
 
 
@@ -209,70 +163,57 @@
 
 
 
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
-
-                                                        </div>
-
-
-
-                                                        {{-- @method('PUT') --}}
-
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-60 elementor-field-required">
-                                                            <button type="submit"
-                                                                class="elementor-button elementor-size-sm">
-                                                                ثبت نام
-                                                            </button>
-                                                        </div>
-
-                                                        <div
-                                                            class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
-
-                                                        </div>
-
-
-
-
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
 
                                                     </div>
-                                                </form>
 
 
-                                            </div>
+
+                                                    {{-- @method('PUT') --}}
+
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-60 elementor-field-required">
+                                                        <button type="submit"
+                                                            class="elementor-button elementor-size-sm">
+                                                            ثبت نام
+                                                        </button>
+                                                    </div>
+
+                                                    <div
+                                                        class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-20 elementor-field-required">
+
+                                                    </div>
+
+
+
+
+
+                                                </div>
+                                            </form>
+
+
+
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-a86bf05"
-                                data-id="a86bf05" data-element_type="column">
-                                <div class="elementor-column-wrap">
-                                    <div class="elementor-widget-wrap">
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
-        </div>
+                </div>
+            </section>
+
     </div>
+</div>
+</div>
 
 
 
 
-    <script type="text/javascript">
-        $('#reload').click(function () {
-            $.ajax({
-                type: 'GET',
-                url: '../reload-captcha',
-                success: function (data) {
-                    $(".captcha span").html(data.captcha);
-                }
-            });
-        });
 
-    </script>
+
+
 
 
 

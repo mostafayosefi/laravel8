@@ -16,14 +16,14 @@ class CreateTextwebservicesTable extends Migration
         Schema::create('textwebservices', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->mediumText('text');
-            $table->string('url');
+            $table->longText('text');
+            $table->string('url')->nullable();
             $table->string('link');
-            $table->bigInteger('categoryapi_id')->unsigned()->index();
+            $table->foreignId('categoryapi_id')->constrained('categoryapis')->cascadeOnDelete();
+
             $table->timestamps();
 
 
-            $table->foreign('categoryapi_id')->references('id')->on('categoryapis')->onDelete('cascade')->onUpdate('cascade');
 
 
         });

@@ -98,9 +98,32 @@
             <link data-minify="1" rel='stylesheet' id='elementor-post-2792-css'  href="{{ asset('telnum_files/post-2792.css?ver=1631770344') }}"  type='text/css' media='all' />
             <link data-minify="1" rel='stylesheet' id='elementor-post-245-css'  href="{{ asset('telnum_files/post-245.css?ver=1631732859') }}"  type='text/css' media='all' />
 
+            <link rel="shortcut icon" href="{{ asset($setting->favicon) }}">
+  <link data-minify="1" rel='stylesheet'   href="{{ asset('telnum_files/mystyle.css') }}"  type='text/css' media='all' />
 
 
- <link data-minify="1" rel='stylesheet'   href="{{ asset('telnum_files/mystyle.css') }}"  type='text/css' media='all' />
+
+{{-- <link data-minify="1" rel='stylesheet' id='elementor-post-2723-css'  href="{{ asset('telnum_files/post-52.css?ver=1631767702') }}"  type='text/css' media='all' />
+<link data-minify="1" rel="stylesheet" id="elementor-post-2-css" href="{{ asset('telnum_files/post-2.css') }}"  type="text/css" media="all">
+<link data-minify="1" rel='stylesheet' id='elementor-post-52-css'  href="{{ asset('telnum_files/post-52.css?ver=1631767702') }}"  type='text/css' media='all' />
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="{{ asset('telnum_files/fontawesome.min.css" type="text/css') }}"  media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-brands-css" href="{{ asset('telnum_files/brands.min.css') }}"  type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-solid-css" href="{{ asset('telnum_files/solid.min.css') }}"  type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-icons-fa-regular-css" href="{{ asset('telnum_files/regular.min.css') }}"  type="text/css" media="all">
+<script type="text/javascript" src="{{ asset('telnum_files/jquery.min.js.download" id="jquery-core-js') }}" ></script>
+<script type="text/javascript" src="{{ asset('telnum_files/jquery-migrate.min.js.download" id="jquery-migrate-js') }}" ></script>
+<script type="text/javascript" src="{{ asset('telnum_files/v4-shims.min.js.download" id="font-awesome-4-shim-js') }}" ></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+
+<style>
+    .container {
+        max-width: 500px;
+    }
+    .reload {
+        font-family: Lucida Sans Unicode
+    }
+</style>
+
 
 
 
@@ -119,9 +142,6 @@
 
 <div id="container">
 @include('index.layouts.navbar')
-
-
-
 
 <div id="main-content">
 

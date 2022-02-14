@@ -20,19 +20,19 @@ class CreateSettingsTable extends Migration
 
 
             $table->string('title');
-            $table->string('instagram');
-            $table->string('facebook');
-            $table->string('twitter');
-            $table->string('youtube');
+            $table->string('instagram')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
             $table->string('tell');
             $table->string('email');
 
             $table->string('address');
-            $table->string('description');
-            $table->string('keyword');
+            $table->longText('description');
+            $table->longText('keyword');
             $table->string('fcopy');
-            $table->string('analatik');
-            $table->string('codetiket');
+            $table->longText('analatik')->nullable();
+            $table->longText('codetiket')->nullable();
 
             $table->string('favicon');
             $table->string('logo');

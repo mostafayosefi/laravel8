@@ -94,7 +94,7 @@ return redirect()->route('admin.page.index');
         $request->validate([
             'title' => 'required',
             'text' => 'required',
-            'image'  => 'required'
+            // 'image'  => 'required'
 
         ]);
 

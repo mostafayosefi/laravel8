@@ -160,20 +160,76 @@
           </li>
 
 
-          <li class="nav-item  {{ isActive(['admin.content.index' , 'admin.content.edit' , 'admin.content.domain.index' , 'admin.content.domain.edit'])}}  ">
-            <a class="nav-link" data-toggle="collapse" href="#content" role="button" aria-expanded="false" aria-controls="content">
+          <li class="nav-item  {{ isActive([  'admin.content.domain.index' , 'admin.content.domain.edit'])}}  ">
+            <a class="nav-link" data-toggle="collapse" href="#contentdomain" role="button" aria-expanded="false" aria-controls="contentdomain">
               <i class="link-icon" data-feather="list"></i>
-              <span class="link-title">مدیریت محتوا</span>
+              <span class="link-title">مدیریت دامنه</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
-            <div class="collapse  {{ isShow(['admin.content.index' , 'admin.content.edit' , 'admin.content.domain.index' , 'admin.content.domain.edit'])}}   "  id="content">
+            <div class="collapse  {{ isShow([  'admin.content.domain.index' , 'admin.content.domain.edit'])}}   "  id="contentdomain">
               <ul class="nav sub-menu">
-                <li class="nav-item">
- <a href="{{ route('admin.content.index') }}" class="nav-link   {{ isActive(['admin.content.index' , 'admin.content.edit']) }}  ">محتوا وب سرویس  </a>
-                </li>
+
                 <li class="nav-item">
  <a href="{{ route('admin.content.domain.index') }}" class="nav-link   {{ isActive(['admin.content.domain.index' , 'admin.content.domain.edit']) }}  ">پسوند دامنه</a>
                 </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item  {{ isActive(['admin.content.document.index' , 'admin.content.document.edit'  , 'admin.content.document.create'  ])}}  ">
+            <a class="nav-link" data-toggle="collapse" href="#contentdocument" role="button" aria-expanded="false" aria-controls="contentdocument">
+              <i class="link-icon" data-feather="list"></i>
+              <span class="link-title"> مدیریت داکیومنت </span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse  {{ isShow(['admin.content.document.index' , 'admin.content.document.edit'  , 'admin.content.document.create'    ])}}   "  id="contentdocument">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+ <a href="{{ route('admin.content.document.create') }}" class="nav-link   {{ isActive(['admin.content.document.index' , 'admin.content.document.edit' ]) }}  ">ثبت داکیومنت جدید  </a>
+                </li>
+                <li class="nav-item">
+ <a href="{{ route('admin.content.document.index') }}" class="nav-link   {{ isActive(['admin.content.document.index' , 'admin.content.document.edit' ]) }}  ">مشاهده داکیومنت ها  </a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item  {{ isActive(['admin.content.categoryapi.index' , 'admin.content.categoryapi.edit'  , 'admin.content.categoryapi.create'  ])}}  ">
+            <a class="nav-link" data-toggle="collapse" href="#categoryapi" role="button" aria-expanded="false" aria-controls="categoryapi">
+              <i class="link-icon" data-feather="list"></i>
+              <span class="link-title">دسته بندی وب سرویس </span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse  {{ isShow(['admin.content.categoryapi.index' , 'admin.content.categoryapi.edit'  , 'admin.content.categoryapi.create'    ])}}   "  id="categoryapi">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+ <a href="{{ route('admin.content.categoryapi.create') }}" class="nav-link   {{ isActive(['admin.content.categoryapi.index' , 'admin.content.categoryapi.edit' ]) }}  ">ثبت دسته بندی وب سرویس  </a>
+                </li>
+                <li class="nav-item">
+ <a href="{{ route('admin.content.categoryapi.index') }}" class="nav-link   {{ isActive(['admin.content.categoryapi.index' , 'admin.content.categoryapi.edit' ]) }}  ">مشاهده دسته بندی وب سرویس   </a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+
+
+          <li class="nav-item  {{ isActive(['admin.content.webservice.index' , 'admin.content.webservice.edit'  ])}}  ">
+            <a class="nav-link" data-toggle="collapse" href="#contentwebservice" role="button" aria-expanded="false" aria-controls="contentwebservice">
+              <i class="link-icon" data-feather="list"></i>
+              <span class="link-title">مدیریت وب سرویس</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse  {{ isShow(['admin.content.webservice.index' , 'admin.content.webservice.edit'  ])}}   "  id="contentwebservice">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+ <a href="{{ route('admin.content.webservice.index') }}" class="nav-link   {{ isActive(['admin.content.webservice.index' , 'admin.content.webservice.edit']) }}  ">مدیریت محتوا وب سرویس  </a>
+                </li>
+                <li class="nav-item">
+ <a href="{{ route('admin.content.webservice.create') }}" class="nav-link   {{ isActive(['admin.content.webservice.create'  ]) }}  ">ثبت محتوا وب سرویس   </a>
+                </li>
+
               </ul>
             </div>
           </li>

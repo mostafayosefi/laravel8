@@ -13,7 +13,9 @@ use App\Http\Controllers\Admin\FetchController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\TextdesController;
+use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\SpotliteController;
+use App\Http\Controllers\Admin\CategoryapiController;
 use App\Http\Controllers\Admin\ContentDomainController;
 use App\Http\Controllers\Admin\GetwaypaymentController;
 
@@ -128,10 +130,46 @@ Route::prefix('manegement')
 
 Route::prefix('content')
 ->name('content.')->group(function () {
-    Route::get('/webservice', [ContentController::class, 'index'])->name('index');
-    Route::get('/webservice/{id}/edit', [ContentController::class, 'edit'])->name('edit');
-    Route::put('/webservice/{id}', [ContentController::class, 'update'])->name('update');
 
+    Route::prefix('webservice')
+    ->name('webservice.')->group(function () {
+
+        Route::get('/', [ContentController::class, 'index'])->name('index');
+        Route::get('/createwebservice', [ContentController::class, 'create'])->name('create');
+        Route::post('/', [ContentController::class, 'store'])->name('store');
+        Route::get('/{id}/edit', [ContentController::class, 'edit'])->name('edit');
+        Route::put('/{id}', [ContentController::class, 'update'])->name('update');
+         Route::delete('/{id}', [ContentController::class, 'destroy'])->name('destroy');
+
+    });
+
+
+
+    Route::prefix('document')
+    ->name('document.')->group(function () {
+
+        Route::get('/', [DocumentController::class, 'index'])->name('index');
+        Route::get('/createdocument', [DocumentController::class, 'create'])->name('create');
+        Route::post('/', [DocumentController::class, 'store'])->name('store');
+        Route::get('/{id}/edit', [DocumentController::class, 'edit'])->name('edit');
+        Route::put('/{id}', [DocumentController::class, 'update'])->name('update');
+        Route::put('/{id}/status', [DocumentController::class, 'status'])->name('status');
+        Route::delete('/{id}', [DocumentController::class, 'destroy'])->name('destroy');
+
+    });
+
+    Route::prefix('categoryapi')
+    ->name('categoryapi.')->group(function () {
+
+        Route::get('/', [CategoryapiController::class, 'index'])->name('index');
+        Route::get('/createcategoryapi', [CategoryapiController::class, 'create'])->name('create');
+        Route::post('/', [CategoryapiController::class, 'store'])->name('store');
+        Route::get('/{id}/edit', [CategoryapiController::class, 'edit'])->name('edit');
+        Route::put('/{id}', [CategoryapiController::class, 'update'])->name('update');
+        Route::put('/{id}/status', [CategoryapiController::class, 'status'])->name('status');
+        Route::delete('/{id}', [CategoryapiController::class, 'destroy'])->name('destroy');
+
+    });
 
     Route::prefix('domain')
     ->name('domain.')->group(function () {

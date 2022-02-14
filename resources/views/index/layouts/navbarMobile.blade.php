@@ -37,69 +37,60 @@
 					<ul id="mobile-navigation" class="menu">
 
 
-<li id="mobile-menu-item-801" data-col-size="2" data-depth="0" class="multicolumn-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children multicolumn"><a href="#"><span> پنل کاربری</span></a>
+<li id="mobile-menu-item-801" data-col-size="2" data-depth="0" class="multicolumn-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children multicolumn"><a href="{{route('user.panel.index')}}"><span> پنل کاربری</span></a>
 <ul class="sub-menu">
 
-<li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">مشاهده پروفایل</a> </li>
 
-<li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="user/editprofile">ویرایش پروفایل</a> </li>
+    <li id="mobile-menu-item-1" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('user.profile.index')}}">مشاهده پروفایل  </a> </li>
+    <li id="mobile-menu-item-2" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('user.contact.index')}}"> اکانت های من</a> </li>
+    <li id="mobile-menu-item-3" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('user.domain.index')}}">خدمات دامنه</a> </li>
+    <li id="mobile-menu-item-4" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('user.profile.secret')}}">تنظیمات امنیتی</a> </li>
 
-<li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="user/defaultsetting">تنظیمات پیش فرض</a> </li>
-
-<li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="user/secret">تنظیمات امنیتی</a> </li>
-
-<li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="user/logout">خروج</a> </li>
-
+    <li id="mobile-menu-item-5" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('user.nameserver.index')}}"> خدمات nameserver </a> </li>
+    <li id="mobile-menu-item-6" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">خدمات dns</a> </li>
+    <li id="mobile-menu-item-7" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('user.finical.index')}}">مدیریت مالی </a> </li>
+    <li id="mobile-menu-item-8" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('user.order.index')}}">مدیریت سفارش ها </a> </li>
+    <li id="mobile-menu-item-9" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="{{ route('index.user.logout') }}" onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();">خروج </a> </li>
+ 
+   <form id="logout-form" action="{{ route('index.user.logout') }}" method="POST"
+   class="d-none">
+   @csrf
+</form> 
 </ul>
 </li>
 
+ 
 
-<li id="mobile-menu-item-801" data-col-size="2" data-depth="0" class="multicolumn-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children multicolumn"><a href="#"><span> مدیریت درخواستها</span></a>
-<ul class="sub-menu">
-
-<li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="user/myrequest/add">ثبت درخواست جدید</a> </li>
-
-<li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="user/myrequest/mng">مشاهده درخواستها</a> </li>
-
-
-
-</ul>
-</li>
-
-
+{{-- 
 <li id="mobile-menu-item-801" data-col-size="2" data-depth="0" class="multicolumn-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children multicolumn"><a href="#"><span>پشتیبانی </span></a>
 <ul class="sub-menu">
-
-
-
 <li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="user/addticket">ثبت تیکت</a> </li>
 <li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="user/viewstickets">مشاهده پیامها
-
   (<span style="color: #18f20d;  "   title="" >  66 پیام جدید</span>)
-
  </a> </li>
-
-
 </ul>
 </li>
-
+ --}}
 
 
 <li id="mobile-menu-item-799" data-col-size="2" data-depth="0" class="multicolumn-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children multicolumn"><a href="#"><span>خدمات و سرویس‌ها</span></a>
 <ul class="sub-menu">
 
 
-<li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">page tit</a> </li>
-
+    @foreach($listpages as $key => $listpage)
+    <li id="mobile-menu-item-2648" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ route('index.page', $listpage->title) }}">{{$listpage->title}}</a> </li>
+    @endforeach     
+ 
 
 
 </ul>
 </li>
-<li id="mobile-menu-item-289" data-depth="0" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="faq"><span>سوالات متداول</span></a> </li>
+<li id="mobile-menu-item-289" data-depth="0" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('index.faqs')}}"><span>سوالات متداول</span></a> </li>
+<li id="mobile-menu-item-289" data-depth="0" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('index.document.index')}}"><span>راهنمای وب سرویس  </span></a> </li>
 <li id="mobile-menu-item-287" data-depth="0" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="#"><span>ارتباط با ما</span></a>
 <ul class="sub-menu">
-<li id="mobile-menu-item-1040" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contact">تماس با ما</a> </li>
-<li id="mobile-menu-item-291" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="register">همکاری با ما</a> </li>
+<li id="mobile-menu-item-1040" data-depth="1" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('index.support')}}">تماس با ما</a> </li> 
 </ul>
 </li>
 </ul>
@@ -107,23 +98,8 @@
 
 
 
+@include('index.layouts.elementor.nav_menue', [  'name_nav' => 'check_auth'  ])
 
-<div class="button_wrapper">
-<a href="#" class="button_  style-1">
-<span style="font-size:18px;padding:8px 15px 8px 15px"> مدیریت پنل من </span>
-<span style="font-size:16px;padding:8px 15px 8px 15px">مدیریت پنل من</span></a></div>
-
-
-						<div class="button_wrapper">
-<a href="login" class="button_  style-1">
-<span style="font-size:18px;padding:8px 15px 8px 15px">ورود</span>
-<span style="font-size:18px;padding:8px 15px 8px 15px">ورود</span></a></div>
-
-
-						<div class="button_wrapper">
-<a href="register" class="button_  style-1">
-<span style="font-size:18px;padding:8px 15px 8px 15px">ثبت نام</span>
-<span style="font-size:18px;padding:8px 15px 8px 15px">ثبت نام</span></a></div>
 
 
 

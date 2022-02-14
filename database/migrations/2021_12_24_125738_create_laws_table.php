@@ -15,7 +15,7 @@ class CreateLawsTable extends Migration
     {
         Schema::create('laws', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->mediumText('text');
+            $table->longText('text');
             $table->bigInteger('setting_id')->unsigned()->index();
             $table->timestamps();
 

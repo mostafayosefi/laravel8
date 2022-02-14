@@ -1,7 +1,7 @@
   @component('admin.layouts.content', [
       'title' => 'ویرایش محتوای وب سرویس',
       'tabTitle' => ' ویرایش محتوای وب سرویس',
-      'breadcrumb' => [['title' => 'لیست محتوای وب سرویس ', 'url' => route('admin.content.index')],
+      'breadcrumb' => [['title' => 'لیست محتوای وب سرویس ', 'url' => route('admin.content.webservice.index')],
        ['title' => 'ویرایش محتوای وب سرویس  ','class' => 'active'],
        ['title' => $textwebservice->title , 'class' => 'active'] ,
     ],
@@ -29,20 +29,29 @@
                               @include('admin.layouts.errors')
 
 
-                              <form class="forms-sample" method="POST" action="{{ route('admin.content.update', $textwebservice) }}"
+                              <form class="forms-sample" method="POST" action="{{ route('admin.content.webservice.update', $textwebservice) }}"
                                   enctype="multipart/form-data" onsubmit="return Validate(this);">
                                   @csrf
                                   <div class="row">
 
                                       <div class="col-sm-12">
 
+ @include('admin.layouts.table.selectbox', [ 'allforeachs' => $categoryapis ,  'input_name' => 'name'  ,  'name_select' => 'دسته بندی وب سرویس'  ,  'value' =>  $textwebservice->categoryapi_id , 'required'=>'required'  , 'index_id'=>'categoryapi_id' ])
 
 
                                         <div class="form-group">
-                                            <label for="title">عنوان</label>
+                                            <label for="title">نام وب سرویس</label>
                                             <input type="text" class="form-control" id="title" autocomplete="off"
-                                                placeholder=" عنوان  " name="title" value="{{$textwebservice->title}}">
+                                                placeholder=" نام وب سرویس  " name="title" value="{{$textwebservice->title}}">
                                         </div>
+
+
+                                        <div class="form-group">
+                                            <label for="url">Url</label>
+                                            <input type="text" class="form-control" id="url" autocomplete="off"
+                                                placeholder=" Url   " name="url" value="{{ old('url') }}">
+                                        </div>
+
 
                                         <div class="form-group">
                                             <label for="link">نمونه کد</label>
@@ -64,7 +73,7 @@
                                           @method('PUT')
 
                                           <div class="card-footer">
-                                              <a href="{{ route('admin.content.index') }}" class="btn btn-danger">بازگشت</a>
+                                              <a href="{{ route('admin.content.webservice.index') }}" class="btn btn-danger">بازگشت</a>
                                               <button type="submit" class="btn btn-primary float-right">ویرایش</button>
                                           </div>
 

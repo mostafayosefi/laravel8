@@ -16,7 +16,7 @@ class CreateTxtdesesTable extends Migration
         Schema::create('txtdeses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->mediumText('text');
+            $table->longText('text');
             $table->string('image');
             $table->timestamps();
         });

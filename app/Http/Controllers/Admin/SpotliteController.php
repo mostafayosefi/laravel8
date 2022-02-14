@@ -24,7 +24,7 @@ class SpotliteController extends Controller
 
         $request->validate([
             'text' => 'required',
-            'image'  => 'required'
+            // 'image'  => 'required'
 
         ]);
         $spotlite=Spotlite::find($id);

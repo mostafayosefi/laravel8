@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\User\OrderController;
 use App\Http\Controllers\Index\IndexController;
 use App\Http\Controllers\User\WalletController;
 use App\Http\Controllers\User\ContactController;
@@ -11,16 +12,16 @@ use App\Http\Controllers\User\FinicalController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\User\MyDomainController;
-use App\Http\Controllers\User\OrderController;
 use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\CaptchaServiceController;
+use App\Http\Controllers\Index\DocumentController;
 use App\Http\Controllers\Service\DomainController;
 use App\Http\Controllers\Index\LoginuserController;
+use App\Http\Controllers\User\NameserverController;
 use App\Http\Controllers\Index\SitemapXmlController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ConfirmPasswordController;
-use App\Http\Controllers\User\NameserverController;
 
 Route::namespace('Auth')->prefix('admin')->group(function () {
     Route::get('/login', [AdminAuthController::class, 'getLogin'])->name('adminLogin');
@@ -40,12 +41,22 @@ Route::namespace('Auth')->prefix('admin')->group(function () {
         Route::namespace('Index')->name('index.')->group(function () {
             Route::get('/', [IndexController::class, 'index'])->name('home');
             Route::get('/service/{title}', [IndexController::class, 'page'])->name('page');
+            Route::get('/contact-us', [IndexController::class, 'support'])->name('support');
+            Route::post('/contact-us', [IndexController::class, 'supportPost'])->name('support.post');
             Route::get('/user/register', [LoginuserController::class, 'register'])->name('user.register');
             Route::post('/user/register', [LoginuserController::class, 'store'])->name('user.register.post');
             Route::get('/user/login', [LoginuserController::class, 'login'])->name('user.login');
             Route::post('/user/login', [LoginuserController::class, 'authenticate'])->name('user.login.post');
             Route::post('/user/logout', [LoginuserController::class, 'logout'])->name('user.logout');
             Route::get('/sitemap.xml', [SitemapXmlController::class, 'sitemap']);
+
+            Route::get('/faqs', [IndexController::class, 'faqs'])->name('faqs');
+
+
+
+            Route::prefix('document')->name('document.')->group(function () {
+                Route::get('/{myurl?}', [DocumentController::class, 'index'])->name('index');
+            });
 
             //domain
 

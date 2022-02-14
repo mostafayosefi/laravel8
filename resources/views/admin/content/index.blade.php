@@ -25,9 +25,10 @@
               <thead>
                 <tr>
                   <th>ردیف</th>
-                  <th>نام سرویس  </th>
-                  <th>نوع وب سرویس  </th>
+                  <th>نام وب سرویس  </th>
+                  <th>دسته وب سرویس  </th>
                   <th>ویرایش</th>
+                  <th>حذف</th>
                 </tr>
               </thead>
               <tbody>
@@ -41,13 +42,19 @@
  <td>
 
 
-<a href="{{ route('admin.content.edit', $admin) }}">
+<a href="{{ route('admin.content.webservice.edit', $admin) }}">
 <span class="btn btn-primary" >  <i data-feather="edit"></i></span>
 </a>
 
 
 </td>
 
+<td>
+
+    @php $admin['title'] = $admin->title;  @endphp
+    @include('admin.layouts.table.modal', [$admin ,'route' => route('admin.content.webservice.destroy', $admin) , 'myname' => $admin->title ])
+
+    </td>
 
                 </tr>
 @endforeach

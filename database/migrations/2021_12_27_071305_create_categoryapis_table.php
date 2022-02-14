@@ -17,6 +17,9 @@ class CreateCategoryapisTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('url');
+            $table->foreignId('document_id')->constrained('documents')->cascadeOnDelete();
+
+
             $table->timestamps();
         });
     }

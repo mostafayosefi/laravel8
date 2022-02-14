@@ -9,10 +9,10 @@
                         <ul id="menu-sub-header" class="menu">
                             <li id="menu-item-2220"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2220"><a
-                                    href="#">تماس با ما</a></li>
+                                    href="{{route('index.support')}}">تماس با ما</a></li>
                             <li id="menu-item-2220"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2220"><a
-                                    href="/"> صفحه نخست</a></li>
+                                    href="{{route('index.home')}}"> صفحه نخست</a></li>
                         </ul>
                     </div>
                 </div>
@@ -44,17 +44,17 @@
                     <div class="header-col left">
 
                         <div id="logo" class="site-logo">
-                            <a href="" title=" TiTlE "><img width="6657" height="2639" src="/public/images/ind_himglog"
+                            <a href="{{route('index.home')}}" title=" TiTlE "><img width="6657" height="2639" src="{{ asset($setting->logo) }}"
                                     alt=" TiTlE " class="dark-logo logo-image lazyloaded"
                                     data-ll-status="loaded"><noscript><img width="6657" height="2639"
-                                        src="/public/images/ind_himglog" alt=" TiTlE "
+                                        src="{{ asset($setting->logo) }}" alt=" TiTlE "
                                         class="dark-logo logo-image" /></noscript><img width="6657" height="2639"
                                     src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%206657%202639&#39;%3E%3C/svg%3E"
                                     alt=" TiTlE " class="light-logo logo-image"
-                                    data-lazy-src="/public/images/ind_himglog"><noscript><img width="6657" height="2639"
-                                        src="/public/images/ind_himglog" alt=" TiTlE "
+                                    data-lazy-src="{{ asset($setting->logo) }}"><noscript><img width="6657" height="2639"
+                                        src="{{ asset($setting->logo) }}" alt=" TiTlE "
                                         class="light-logo logo-image" /></noscript></a>
-                        </div><!-- / end #logo -->
+                        </div>
 
 
     @if(auth()->guard('user')->user())
@@ -74,10 +74,7 @@
 
     </ul></nav>
 
-
-
                         </div>
-
 
                         <div class="header-col right">
 
@@ -86,20 +83,12 @@
                             <div class="textwidget custom-html-widget">
 
 
-
-
-
 @guest
  @else
 @endguest
 
 
         @include('index.layouts.elementor.nav_menue', [  'name_nav' => 'check_auth'  ])
-
-
-
-
-
 
 
     </div>
@@ -121,15 +110,11 @@
 
 
             <div id="sticky-logo" class="site-logo">
-                 <a href="" title=" TiTlE "><img width="4657" height="1847" src="/public/images/ind_himglog" alt=" TiTlE " class="sticky-logo lazyloaded" data-ll-status="loaded"><noscript><img width="4657" height="1847" src="/public/images/ind_himglog" alt="" class="sticky-logo" /></noscript></a>
-            </div><!-- / end #sticky-logo -->
-
+                 <a href="{{route('index.home')}}" title=" TiTlE "><img width="4657" height="1847" src="{{ asset($setting->logo) }}" alt=" TiTlE " class="sticky-logo lazyloaded" data-ll-status="loaded"><noscript><img width="4657" height="1847" src="{{ asset($setting->logo) }}" alt="" class="sticky-logo" /></noscript></a>
+            </div>
 
                         </div>
-
                                             <div class="header-col center">
-
-
 
                 <nav class="main-menu-wrapper">
                 <ul class="main-menu">
@@ -145,43 +130,23 @@
 
     </ul></nav>
 
-
-
                         </div>
 
                         <div class="header-col right">
-
-
-
-
 
     <div id="custom_html-2" class="widget_text header-widget widget widget_custom_html">
 
                             <div class="textwidget custom-html-widget">
 
-
-
         @include('index.layouts.elementor.nav_menue', [  'name_nav' => 'check_auth'  ])
 
-
-
-
-
+ 
 
     </div>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
+ 
 
                                         <div class="header-tools">
                     <ul>
@@ -205,7 +170,7 @@
 
 
                         <div id="mobile-logo" class="mobile-logo-holder">
-                             <a href="" title=" TiTlE "><img width="6657" height="2639" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%206657%202639&#39;%3E%3C/svg%3E" alt=" TiTlE " class="mobile-logo logo-auto-height" data-lazy-src="/public/images/ind_himglog"><noscript><img width="6657" height="2639" src="/public/images/ind_himglog" alt="" class="mobile-logo logo-auto-height" /></noscript></a>
+                             <a href="{{route('index.home')}}" title=" TiTlE "><img width="6657" height="2639" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%206657%202639&#39;%3E%3C/svg%3E" alt=" TiTlE " class="mobile-logo logo-auto-height" data-lazy-src="{{ asset($setting->logo) }}"><noscript><img width="6657" height="2639" src="{{ asset($setting->logo) }}" alt="" class="mobile-logo logo-auto-height" /></noscript></a>
                         </div><!-- / end #mobile-logo -->
 
 
