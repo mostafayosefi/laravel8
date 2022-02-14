@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ovsa85241095/public_html/servicedomain
+    - export DEPLOYPATH=/home/iraninic/public_html
     - /bin/cp -r app $DEPLOYPATH
     - /bin/cp -r resources $DEPLOYPATH
     - /bin/cp -r routes $DEPLOYPATH
